@@ -1,9 +1,6 @@
-# Oppgaver
-For å legge til ein oppgave, lag ein ny branch på formatet `challenge/<kategori>/<navn>`, e.g. `challenge/rev/javafun`.
-
 ### Flaggformat:
-`KID20{*}`
-Bruk * kan være mer eller mindre hva som helst. Ungå gjerne mellomrom, og kan godt hive på l33t speak. E.g.:
+`KID20{*}`\
+`*` kan være mer eller mindre hva som helst. Ungå gjerne mellomrom, og kan godt hive på l33t speak. E.g.:
 `KID20{th1s_i5_my_l33t_fl4g}`
 
 ### Språk:
@@ -16,13 +13,13 @@ Mappestruktur:
 ```
 ├── README.md
 ├── crypto
-    └── ...
+│   └── ...
 ├── misc
-    └── ...
+│   └── ...
 ├── rev
-    └── ...
+│   └── ...
 ├── stego
-    └── ...
+│   └── ...
 └── web
     └── guessy-as-fork
         ├── Dockerfile
@@ -72,9 +69,6 @@ Kjekke tips til docker-compose.
 
 ### Filer:
 Har man filer som skal lastes opp, lag en mappe med navn `files` og legg filer i denne.
-
-# Branches:
-For å lage oppgavene, opprett en branch på formatet `challenge/<kategori>/<navn>` og gjør en pull request for å få den in i #main.
 
 # Ekstra:
 Ikke vær redd for å pushe til egen branch, er fin måte å få tilbakemelding på, og andre kan se over og kommentere. Ikke vær redd for å gjør feil eller ødelegg ting. Ting blir sett over før det merges inn i #main.
