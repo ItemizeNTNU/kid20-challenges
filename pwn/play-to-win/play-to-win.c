@@ -4,7 +4,6 @@
 #include <signal.h>
 #include <unistd.h>
 
-char flag[]  = "REDACTED";
 
 void ignore_me_init_buffering() {
     setvbuf(stdout, NULL, _IONBF, 0);
@@ -24,14 +23,22 @@ void ignore_me_init_signal() {
     alarm(60);
 }
 
+void win() {
+    system("/bin/sh");
+}
+
 int main() {
     ignore_me_init_buffering();
     ignore_me_init_signal();
 
-    char *flagPointer = flag;
-    char input[20];
-    puts("Where to look?");
-    fgets(input, 20, stdin);
-    printf(input);
+    char input[0x55];
+    puts("Enter the magic number to win:");
+    gets(input);
+    if(strcmp(input, "31337") == 0) {
+        puts("🎉🎉🎉🎉");
+    }
+    else {
+        puts("Sorry :/");
+    }
     return 0;
 }
