@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 import orjson
 import codecs
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="/")
 
 # Check cookie for pickled user object, if changed, allow pwn
 @app.route('/')
