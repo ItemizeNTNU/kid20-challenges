@@ -1,0 +1,10 @@
+version: '3'
+services:
+    web:
+      image: "php:7.2-apache"
+      volumes:
+        - './www:/var/www/html'
+      ports:
+        - '25746:80'
+      restart: always
+      stop_signal: SIGKILL
