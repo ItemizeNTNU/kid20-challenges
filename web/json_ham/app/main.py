@@ -24,7 +24,7 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
         user = { 'username': username, 'password': password, 'show_flag': False }
-        base64_user = base64.encodebytes(orjson.dumps(user))
+        base64_user = base64.encodebytes(orjson.dumps(user)).replace(b'\n',b'')
         resp.set_cookie('user', base64_user)
         return resp
     return render_template('login.html')
