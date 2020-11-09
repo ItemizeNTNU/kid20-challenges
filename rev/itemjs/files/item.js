@@ -1,1 +1,1 @@
-item.js
+../item.js
