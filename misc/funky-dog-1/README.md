@@ -15,7 +15,9 @@ docker swarm init
 echo -n XXXXXXXXXXXXXXXXXXX | faas-cli login --username=admin --password-stdin
 
 faas build -f secret-vault.yml
-faas build -f ./funky_dog/my_functions/stack.yml
 faas deploy -f secret-vault.yml
-faas deploy -f ./funky_dog/my_functions/stack.yml
+
+cd funky_dog/my_functions/
+faas build -f stack.yml
+faas deploy -f stack.yml
 ```
