@@ -6,14 +6,14 @@ def read_from_file(path):
         f.close()
 
 
-username = read_from_file("/var/openfaas/secrets/secret-username")
-password = read_from_file("/var/openfaas/secrets/secret-password")
+u = read_from_file("/var/openfaas/secrets/secret-username").strip()
+p = read_from_file("/var/openfaas/secrets/secret-password").strip()
 flag = read_from_file("/var/openfaas/secrets/flag")
 
 
 def handle(req):
-    request_username, request_password = req.split(":")
-    if request_password == password and request_username == username:
+    username, password = req.split(":")
+    if username == u and password == p:
         return "My little secret: " + flag
     else:
-        return "No you! Wrong password and username"
+        return "No you! Wrong password or username."
