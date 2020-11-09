@@ -1,0 +1,13 @@
+{
+  "name": "kid-ctf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "item.js",
+  
+  "author": "",
+  "license": "ISC",
+  
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
