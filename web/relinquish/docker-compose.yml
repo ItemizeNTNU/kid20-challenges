@@ -1,0 +1,10 @@
+version: '3'
+services:
+    web:
+      build: .
+      volumes:
+        - '.:/app'
+      ports:
+        - '38611:5000'
+      stop_signal: SIGKILL
+      

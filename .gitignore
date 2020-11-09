@@ -1,3 +1,6 @@
+### Custom ###
+.vscode
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,windows,linux,gradle,node,flask,vscode,intellij+all,venv,python,vim
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,linux,gradle,node,flask,vscode,intellij+all,venv,python,vim
