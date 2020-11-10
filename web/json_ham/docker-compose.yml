@@ -1,0 +1,8 @@
+version: '3'
+services:
+  json_ham:
+    build: .
+    ports:
+      - "30742:80"
+    stop_signal: SIGKILL
+    restart: always
