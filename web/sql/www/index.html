@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Web Page</title>
+<style> 
+body {
+	background-color: #aaaaaa;
+}
+.centerDiv {
+	border: 2px solid #000000;
+	border-radius: 25px;
+	background-color: lightblue;
+  	text-align: center;
+  	padding: 10px;
+  	margin: 30px;
+  	display: block;
+}
+.container {
+	display: block;
+	padding: 4px;
+	margin: 4px;
+}
+</style>
+</head>
+<body>
+<div class="centerDiv">
+<h1>Welcome to my first web page!</h1>
+<h3>Only administrators are allowed to see the secrets of this web page</h3>
+ <form action="login.php" method="post">
+
+  	<div class="container">
+    <label for="name"><b>Username: </b></label>
+    <input type="text" placeholder="Enter Username" name="name" required>
+</div><div class="container">
+    <label for="psw"><b>Password: </b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="hidden" name="debug" value=0>
+    </div>
+    <button type="submit">Login</button>
+</form> 
+</div>
+</body>
+</html> 
