@@ -1,5 +1,5 @@
 author: Håkon
-flag:KID20{TRAVELLINGISNICE}
+flag: KID20{TRAVELLINGISNICE}
 
 --
 

