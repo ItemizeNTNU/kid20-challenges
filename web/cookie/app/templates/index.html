@@ -1,0 +1,7 @@
+{% if username%}{% set username=username%}{%endif%}
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Welcome to my web page! I'am Cookie Monster OMM-nom-nom-nom...</h2>
+<p>{{message}}</p>
+<img src={{ url_for('static', filename='/images/cookie_monster.png') }} width=400>
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% if request.cookies.get('username') and not logout %}
+  {% set username=request.cookies.get('username') %}{%endif%}
+{% set active_page = active_page|default('index') -%}
+{% if username %} {% set navigation_bar = [
+  ('/', 'index', 'Home'),
+  ('/account', 'account', 'My Account'),
+  ('/logout', 'logout', 'Logout')
+  ] -%}
+{% else %} {% set navigation_bar = [
+  ('/', 'index', 'Home'),
+  ('/login', 'login', 'Login'),
+  ('/register', 'register', 'Register')
+  ] -%}
+  {%endif%}
+
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <meta charset="UTF-8">
+  <title>Cookies</title>
+</head>
+
+<body>
+  <div class="main">
+    {% block navbar %}
+    <div class='topnav'>
+      {% for href, id, caption in navigation_bar %}
+      <a {% if id==active_page %} class="active" {% endif %} href="{{ href|e }}">{{ caption|e }}</a>
+      </li>
+      {% endfor %}
+    </div>
+    <div class='content'>
+      {% endblock %}
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+</body>
+
+</html>

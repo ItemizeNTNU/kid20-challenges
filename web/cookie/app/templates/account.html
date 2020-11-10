@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% set active_page = "account" %}
+{% block content %}
+<h3>Welcome {{ username }}, here you can see your account information</h3>
+<p>Real name: {{name}}</p>
+<p>Favorite Muppet: {{favmuppet}}</p>
+<p>Favorite Sound: {{favsound}}</p>
+<p>Flag: {% if username=='admin' %}KID20{y0u_d35Rve_A_c0oki3}{%else%}N/A{%endif%}
+{% endblock %}

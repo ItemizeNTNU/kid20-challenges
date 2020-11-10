@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% set active_page = "login" %}
+{% block content %}
+<h1>Login</h1>
+<p>{{message}}</p>
+<form action="/login" method="post" style="display: block;">
+  <div class="form" style="min-width: 150px; width: 15%;">
+    <label for="username"><b>Username: </b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    <label for="password"><b>Password: </b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    <button type="submit">Login</button>
+  </div>
+</form>
+{% endblock %}

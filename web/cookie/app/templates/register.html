@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% set active_page = "register" %}
+{% block content %}
+<h1>Register new user</h1>
+<p>{{message}}</p>
+<form action="/register" method="post" style="display: block;">
+  <div class="form" style="min-width: 150px; width: 15%;">
+  	<label for="name"><b>Name: </b></label>
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="favmuppet"><b>Favorite muppet: </b></label>
+    <input type="text" placeholder="Enter Your Favorite Muppet" name="favmuppet" required>
+    <label for="favsound"><b>Favorite Sound: </b></label>
+    <input type="text" placeholder="Enter Your Favorite Sound" name="favsound" required>
+    <label for="username"><b>Username: </b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+    <label for="password"><b>Password: </b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    <button type="submit">Register</button>
+  </div>
+</form>
+{% endblock %}
