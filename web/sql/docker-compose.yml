@@ -17,5 +17,3 @@ services:
       MYSQL_DATABASE: 'db_test'
       MYSQL_USER: 'db_user'
       MYSQL_PASSWORD: 'db_password'
-    ports: 
-      - "3306:3306"

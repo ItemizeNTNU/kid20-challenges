@@ -15,5 +15,5 @@ app.register_blueprint(login_blueprint)
 app.register_blueprint(logout_blueprint)
 
 if __name__ == '__main__':
-	print('starting...')
-	app.run('0.0.0.0',debug =True)
+    print('starting...')
+    app.run('0.0.0.0', debug=False)
