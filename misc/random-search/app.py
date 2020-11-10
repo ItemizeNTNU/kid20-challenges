@@ -12,9 +12,6 @@ for _ in range(500):
 target = random.choice(nums)
 print(f'target: {target}')
 
-print(nums)
-print(nums.index(target))
-
 for guess in range(9):
     try:
         i = int(input("> "))
@@ -22,8 +19,8 @@ for guess in range(9):
             print(nums[i])
         else:
             print('error: out of bounds')
-    except Exception as e:
-        print('error:', e)
+    except:
+        print('error: invalid number')
 
 print(f'at what index is the number {target}?')
 try:
@@ -37,5 +34,5 @@ try:
             print(f'nope, sorry, correct index was {nums.index(target)}')
     else:
         print('error: out of bounds')
-except Exception as e:
-    print('error:', e)
+except:
+    print('error: invalid number')
