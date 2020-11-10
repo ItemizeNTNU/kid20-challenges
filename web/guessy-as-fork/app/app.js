@@ -1,7 +1,7 @@
 const fs = require('fs');
 const polka = require('polka');
 
-const speeding = fs.readFileSync('speeding.png');
+const speeding = fs.readFileSync('speeding.jpg');
 
 const reqs = {};
 
@@ -36,7 +36,7 @@ blockRoute.get('/waf/error/', (req, res) => {
 });
 
 blockRoute.get('/waf/error/speeding', (req, res) => {
-	res.writeHead(200, { 'Content-Type': 'image/png' });
+	res.writeHead(200, { 'Content-Type': 'image/jpeg' });
 	res.end(speeding);
 });
 
@@ -45,7 +45,7 @@ blockRoute.get('/waf/statistics/', (req, res) => {
 });
 
 blockRoute.get('/waf/statistics/access', (req, res) => {
-	const data = JSON.stringify(stats, Object.keys(stats).sort()); 
+	const data = JSON.stringify(stats, Object.keys(stats).sort());
 	res.writeHead(200, {
 		'Content-Type': 'application/json;charset=utf-8',
 	});
@@ -83,6 +83,9 @@ function waf(req, res, next) {
 
 const app = polka();
 app.use(waf);
+app.get('/', (req, res) => {
+	res.end('Hi there, nothing special at this place. Maybe try somewhere else?');
+});
 app.get('/e73470324687126d04a9386831482ff7/flag.txt', (req, res) => {
 	res.end('KID20{tOlD_Y0u_n0t_6U3zzy}');
 });
