@@ -17,7 +17,7 @@ echo -n XXXXXXXXXXXXXXXXXXX | faas-cli login --username=admin --password-stdin
 faas build -f secret-vault.yml
 faas deploy -f secret-vault.yml
 
-cd funky_dog/my_functions/
+cd functions/
 faas build -f stack.yml
 faas deploy -f stack.yml
 ```
