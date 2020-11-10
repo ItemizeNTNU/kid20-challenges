@@ -15,7 +15,7 @@ print(f'target: {target}')
 print(nums)
 print(nums.index(target))
 
-for guess in range(6):
+for guess in range(9):
     try:
         i = int(input("> "))
         if i in range(len(nums)):

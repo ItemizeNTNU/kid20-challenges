@@ -9,7 +9,7 @@ print('target:', target)
 # binary search
 step = 500 // 2
 i = step
-for _ in range(6):
+for _ in range(9):
     step = math.ceil(step / 2)
     io.readuntilS('> ')                 # read '> ' prefix
     io.sendline(str(i))                 # send index we want to read
@@ -20,6 +20,8 @@ for _ in range(6):
     elif n < target:
         print(f'n {n} is less than target {target}')
         i += step
+    else:
+        print(f'we found n {n} == target {target}')
 
 io.readuntilS('index: ')
 
