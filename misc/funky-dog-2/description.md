@@ -10,4 +10,4 @@ It seems he made a new function called secret-vault:
 
 Can you retrive his secret from the vault?
 
-_Note: Only /function/\* is within scope_
+_Note: /ui/\* is NOT within scope_
