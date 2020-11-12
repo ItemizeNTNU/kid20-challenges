@@ -5,8 +5,10 @@ flag:
 
 --
 
-ITEMJS
-
 Are you a true JS advanced user? Feed our program some input in order to print our flags!
 
-{url}
+```
+nc 129.241.209.70 57285
+```
+
+This challenge returns two flags. Submit the first flag here.

@@ -1,0 +1,20 @@
+version: '3'
+services: 
+  web:
+    build: .
+    ports:
+      - '37809:5000'
+    stop_signal: SIGKILL
+    restart: always
+  db:
+    restart: always
+    image: mariadb
+    volumes:
+      - './db/setup.sql:/docker-entrypoint-initdb.d/setup.sql'
+    environment:
+      MYSQL_ROOT_PASSWORD: 'db_password'
+      MYSQL_DATABASE: 'db_test'
+      MYSQL_USER: 'db_user'
+      MYSQL_PASSWORD: 'db_password'
+
+  

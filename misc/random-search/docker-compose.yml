@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  app:
+    build: '.'
+    ports:
+        - '47391:3000'
+    environment:
+      - 'FLAG=KID20{b1n4ry_5e4rch_i5_n1c3}'
+    stop_signal: SIGKILL
+    restart: always
