@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-{% if request.cookies.get('username') and not logout %}
-  {% set username=request.cookies.get('username') %}{%endif%}
+{% if request.cookies.get('username_cookie_monster') and not logout %}
+{% set username=request.cookies.get('username_cookie_monster') %}{%endif%}
 {% set active_page = active_page|default('index') -%}
 {% if username %} {% set navigation_bar = [
   ('/', 'index', 'Home'),
@@ -13,7 +13,7 @@
   ('/login', 'login', 'Login'),
   ('/register', 'register', 'Register')
   ] -%}
-  {%endif%}
+{%endif%}
 
 
 <head>
