@@ -29,7 +29,7 @@ def login():
 		if (result is None):
 			return render_template('login.html',message = "Login failed")
 		resp = make_response(render_template('index.html', message="You are now logged in as " + username +". Enjoy your stay :)", username=username))
-		resp.set_cookie('username', username)
+		resp.set_cookie('username_cookie_monster', username)
 		return resp
 
 	else: 

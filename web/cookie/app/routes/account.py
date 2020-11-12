@@ -13,7 +13,7 @@ config = {
 
 @account_blueprint.route('/account', methods=['post', 'get'])
 def account():
-	username = request.cookies.get('username')
+	username = request.cookies.get('username_cookie_monster')
 	connection = mysql.connector.connect(**config)
 	crsr = connection.cursor(prepared=True)
 	sql = 'SELECT * FROM Users WHERE username=%s'
