@@ -1,8 +1,7 @@
 import pwn  # use `pip install pwntools`
 import math
 
-# io = pwn.remote('129.241.209.70', 47391)
-io = pwn.remote('localhost', 47391)
+io = pwn.remote('129.241.209.70', 47391)
 
 for _ in range(10):
     print(io.readlineS())  # satge
