@@ -60,7 +60,9 @@ Target: http://129.241.209.70:57284/
 ...
 ```
 We do however see that quite quickly, we get _alot_ of 302 redirects, all pointing to `/waf/error/speeding`. Trying to access the URL we get presented with the image:
+
 ![/waf/error/speeding](speeding.jpg)
+
 The URL also says error speeding, indicating that some sort of filter kicked in when we sent too many requests to the web server, triggering the WAF, or [Web Application Firewall](https://en.wikipedia.org/wiki/Web_application_firewall).
 
 If we wait too long, we also see that the image disapears and we get a `404 Not Found` message.
