@@ -4,7 +4,7 @@ On this web page we are presented with only a login terminal and the text
 
 ---
 
-Welcome to my first web page!
+Welcome to my first web page!</br>
 Only administrators are allowed to see the secrets of this web page
 
 ---
@@ -20,7 +20,7 @@ Since we are given the information that only administrators are allowed to see t
 username: admin' -- 
 password: whatever
 ```
-(make sure to have a space after the last *-* in the username)
+(make sure to have a space after *--* in the username)<\br>
 Which will result in the following SQL query:
 ```sql 
 SELECT * FROM Users WHERE username = 'admin' --  AND password = 'whatever'
