@@ -20,7 +20,7 @@ Since we are given the information that only administrators are allowed to see t
 username: admin' -- 
 password: whatever
 ```
-(make sure to have a space after *--* in the username)<\br>
+(make sure to have a space after *--* in the username)</br>
 Which will result in the following SQL query:
 ```sql 
 SELECT * FROM Users WHERE username = 'admin' --  AND password = 'whatever'
