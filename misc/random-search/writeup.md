@@ -4,4 +4,4 @@ For this challenge, you were presented with connecting to a service over netcat,
 
 We can then do a binary-search looking for the value provided. Doing this 10 times unlocks the flag.
 
-A possible solution script has been provided in `solve.py`.
+A possible solution script has been provided in [solve.py](solve.py).
