@@ -4,7 +4,7 @@ In this task an unlucky person has lost the flag in his file, and he has asked f
 
 ---
 In the java file the flag has many manipulations done to it, the final flag is converted to byte array *b*. The [output.txt](output.txt) file consists of *b[0]*\*0+ *b[1]*\*1+*b[2]*\*0 and so on. In order to revert the changes we need to revert every function in the file and revert the order at which these manipulations are done. 
-In addition to the manipulation functions the file reads bits from [binary.txt](bits.txt) and uses the native library file libstring.so which can be found in [flag-manipullator.zip](../files/flag-manipullator.zip). By inspecting the native library file, in an program like ghidra, we can find the function *getString*. The functions contains:
+In addition to the manipulation functions the file reads bits from [bits.txt](bits.txt) and uses the native library file libstring.so which can be found in [flag-manipulator.zip](../files/flag-manipulator.zip). By inspecting the native library file, in an program like ghidra, we can find the function *getString*. The functions contains:
 ```
 void Java_Manipulator_getString
                (long *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4,
