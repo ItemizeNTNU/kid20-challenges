@@ -66,7 +66,7 @@ functions:
 Billy is mounting a secret to the "dog" function. Reading the [documentation](https://docs.openfaas.com/reference/secrets/) for OpenFaaS about secrets, we know that the secret is read in the Docker-container file-system from the location: "/var/openfaas/secrets/secret-name".
 
 All the functions running on OpenFaaS can be accessed with the endpoint: "DOMAIN/function/NAME OF FUNCTION".
-Trying [http://129.241.209.104:8080/function/dog](http://129.241.209.104:8080/function/dog) we only get 200 OK response and no text.
+Trying [http://129.241.209.104:8080/function/dog](http://129.241.209.104:8080/function/dog) we only get a 200 OK response with no body/text.
 
 Next we can find out what the "dog" function actually does:
 
@@ -88,7 +88,7 @@ USER 1000
 CMD [ "/usr/bin/fwatchdog"]
 ```
 
-The function is running the Linux cat command! Now we can try to cat the contents of the "secret-password" mounted in the container.
+The function is running the Unix cat command! Now we can try to cat the contents of the "secret-password" mounted in the container.
 
 ```bash
 ❯ curl -X POST http://129.241.209.104:8080/function/dog -d '/var/openfaas/secrets/secret-password'
