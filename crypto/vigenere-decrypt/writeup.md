@@ -1,0 +1,1 @@
+The text is encrypted with Vigenère cipher. It can easily be decoded with the help of a decryption tool. The key that is needed to decrypt the text is CREPES. 
