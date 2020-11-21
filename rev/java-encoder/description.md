@@ -1,5 +1,5 @@
-author: sigurd
-flag: KID20{H0t~damn_r3ver5e-engin33ring_d0ne~:clap:}
+author: sigurd</br>
+flag: ``KID20{H0t~damn_r3ver5e-engin33ring_d0ne~:clap:}``
 
 --
 
