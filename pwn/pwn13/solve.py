@@ -12,8 +12,8 @@ exe = context.binary = ELF('./pwn13')
 # for all created processes...
 # ./exploit.py DEBUG NOASLR
 # ./exploit.py GDB HOST=example.com PORT=4141
-host = args.HOST or 'localhost'
-port = int(args.PORT or 20002)
+host = args.HOST or '129.241.209.70'
+port = int(args.PORT or 33114)
 
 def local(argv=[], *a, **kw):
     '''Execute the target binary locally'''
