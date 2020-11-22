@@ -30,4 +30,5 @@ root@kali:~/Documents/kidctf/zip# dd if=r.zip of=out.png bs=1 skip=440
 ```
 
 Opening `out.png` gives us the flag:
+
 ![flag](./writeup/out.png)
