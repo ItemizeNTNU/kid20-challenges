@@ -1,7 +1,7 @@
 # zipomania
 ## Description
 
-The first thing one might try here is to unzip until you come to the bottom. If you try that, you will not succeed as this is based on a [self-containing zip-file](https://research.swtch.com/zip=).
+The first thing one might try here is to unzip until you come to the bottom. If you try that, you will not succeed as this is based on a [self-containing zip-file](https://research.swtch.com/zip).
 
 Now, what? Let's look at the size of the zip as we unzip. We would then see that the zip suddenly goes from 6399 bytes to 440 bytes. When the zip-file has reached 440 bytes, the file stays at 440 bytes.
 
@@ -30,4 +30,4 @@ root@kali:~/Documents/kidctf/zip# dd if=r.zip of=out.png bs=1 skip=440
 ```
 
 Opening `out.png` gives us the flag:
-![flag](/writeup/out.png)
+![flag](./writeup/out.png)
