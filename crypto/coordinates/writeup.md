@@ -1,0 +1,1 @@
+The flag consists of coordinates. The flag is the result of the first letter of all the countries that the coordines represents. To obtain the countries which belongs to the coordinates it is possible to make a script, or simply search for all the coordinates. 
