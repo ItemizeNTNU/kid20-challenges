@@ -1,7 +1,0 @@
-version: "3.1"
-services:
-  app:
-    build: '.'
-    ports:
-        - '33114:20002'
-    restart: always

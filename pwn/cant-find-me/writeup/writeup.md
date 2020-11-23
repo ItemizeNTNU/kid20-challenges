@@ -25,7 +25,7 @@ int main() {
 
 We can see that in the main function, a pointer to the flag is created, before we are asked where to look. Our input is then printed to stdout using `printf` without any formatter. 
 
-The first parameter to the `printf` function is a format string. meaning we can specify the type of parameters we want to print. We can look at the details by typing `man 3 printf` in a terminal.
+The first parameter to the `printf` function is a format string, meaning we can specify the type of parameters we want to print. We can look at the details by typing `man 3 printf` in a terminal.
 
 The safe way to call this function would have been `printf("%s", input)`, then the function would print our input as a string. But the way its used in this program, the user controls the first argument to printf, meaning we can control how the output is formated. lets say we send in `%p`, the program will then assume that there is a second argument to printf, and since this a 64bit binary, it will print the pointer in the register `RSI`.
 
